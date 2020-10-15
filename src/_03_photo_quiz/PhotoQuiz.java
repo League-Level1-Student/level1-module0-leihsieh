@@ -36,9 +36,9 @@ public class PhotoQuiz {
 		// 5. call the pack() method on the quiz window
 		quizWindow.pack();
 		// 6. ask a question that relates to the image
-		String input = JOptionPane.showInputDialog("What color is the United States?");
+		String input = JOptionPane.showInputDialog("What color is Canada?");
 		// 7. print "CORRECT" if the user gave the right answer
-		if(input.equalsIgnoreCase("orange")) {
+		if(input.equalsIgnoreCase("yellow")) {
 			JOptionPane.showMessageDialog(null, "CORRECT");
 		}
 		// 8. print "INCORRECT" if the answer is wrong
@@ -47,18 +47,24 @@ public class PhotoQuiz {
 		}
 		// 9. remove the component from the quiz window (you may not see the
 		// effect of this until step 12)
-
+		quizWindow.remove(c);
 		// 10. find another image and create it (might take more than one line
 		// of code)
-
+		String url2 = "https://geology.com/world/world-map-360.gif";
+		Component c2 = createImage(url2);
 		// 11. add the second image to the quiz window
-
+		quizWindow.add(c2);
 		// 12. pack the quiz window
-
+		quizWindow.pack();
 		// 13. ask another question
-
+		String input2 = JOptionPane.showInputDialog("What color is Canada?");
 		// 14+ check answer, say if correct or incorrect, etc.
-
+		if (input2.equalsIgnoreCase("green")) {
+			JOptionPane.showMessageDialog(null, "CORRECT");
+		}
+		else {
+			JOptionPane.showMessageDialog(null, "INCORRECT");
+		}
 	}
 
 	private Component createImage(String imageUrl) throws MalformedURLException {
