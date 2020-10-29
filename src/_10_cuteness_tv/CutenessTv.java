@@ -18,6 +18,7 @@ public class CutenessTv implements ActionListener {
 	
 	public void run() {
 		
+		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		frame.setVisible(true);
 		frame.add(panel);
 		panel.add(leftbutton);
@@ -39,7 +40,12 @@ public class CutenessTv implements ActionListener {
 		if(buttonPressed == leftbutton) {
 			playVideo("https://www.youtube.com/watch?v=MtN1YnoL46Q");
 		}
-		
+		if(buttonPressed == middlebutton) {
+			playVideo("https://www.youtube.com/watch?v=cBkWhkAZ9ds");
+		}
+		if(buttonPressed == rightbutton) {
+			playVideo("https://www.youtube.com/watch?v=a-xWhG4UU_Y");
+		}
 		
 	}
 	void playVideo(String videoID) {
