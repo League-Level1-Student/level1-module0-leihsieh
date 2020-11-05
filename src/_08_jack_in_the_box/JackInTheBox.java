@@ -28,9 +28,9 @@ public class JackInTheBox implements ActionListener {
 		panel.add(button);
 		frame.pack();
 		button.addActionListener(this);
-		//showPicture("jackInTheBox.png");
 		
 	}
+	
 	
 	public void showPicture(String fileName) {
 		try {
